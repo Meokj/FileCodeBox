@@ -5,20 +5,6 @@ FileCodeBox 是一个基于 FastAPI + Vue3 开发的轻量级文件分享工具�
 
 <hr>
 
-## NGINX配置
-```bash
-    location / {
-        proxy_pass  http://127.0.0.1:12345;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        client_max_body_size 1G; 
-        proxy_buffers 4 4k; 
-        proxy_busy_buffers_size 4k; 
-        sendfile on;
-        tcp_nopush on; 
-    }
-```
 ## 使用
 * 安装
 ```bash
@@ -38,6 +24,22 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/u
 | 查看日志     | ```sudo journalctl -u filecodebox -f```                     |
 | 开机自启动   | ```sudo systemctl enable filecodebox```                     |
 | 关闭开机启动 | ```sudo systemctl disable filecodebox```                    |
+
+## NGINX配置
+```bash
+    location / {
+        proxy_pass  http://127.0.0.1:12345;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        client_max_body_size 1G; 
+        proxy_buffers 4 4k; 
+        proxy_busy_buffers_size 4k; 
+        sendfile on;
+        tcp_nopush on; 
+    }
+```
+
 ## 访问
 * 访问地址
 ```bash
