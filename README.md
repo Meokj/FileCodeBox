@@ -8,11 +8,11 @@ FileCodeBox 是一个基于 FastAPI + Vue3 开发的轻量级文件分享工具�
 ## 使用
 * 安装
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install_filecodebox.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Meokj/FileCodeBox/main/bash/install_filecodebox.sh)
 ```
 * 卸载
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/uninstall_filecodebox.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/Meokj/FileCodeBox/main/bash/uninstall_filecodebox.sh)
 ```
 ### 服务管理命令
 | 操作         | 命令                                                        |
